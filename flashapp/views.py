@@ -15,7 +15,13 @@ def add(request):
         old_num_1 = request.POST['old_num_1']
         old_num_2 = request.POST['old_num_2']
         correct_answer = int(old_num_1) + int(old_num_2)
-        if int(answer) == int(correct_answer):
+            
+        if request.POST == 'NaN':
+            my_answer = "Am I a joke to you!? Type a number, please"
+            color = "danger"
+        
+      
+        elif int(answer) == int(correct_answer):
             my_answer = "Correct! " + old_num_1 + " + " + old_num_2 + " = " + str(correct_answer)
             color = "success"
         else:

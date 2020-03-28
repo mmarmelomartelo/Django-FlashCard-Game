@@ -24,7 +24,7 @@
 <form action= {% url 'divide'%} method= "POST">
 {% csrf_token %}
   <div class="form-group">
-       <input type="text" class="form-control" placeholder="Type your answer here (only numbers, please!)" name="answer">
+       <input type="text" class="form-control" placeholder="Type your answer here (only numbers, please!)" name="answer" required>
        <input type="hidden"  name="old_num_1" value = {{ num_1}}>
        <input type="hidden"  name="old_num_2" value = {{ num_2}}>
   </div>
